@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+"""PYTail runtime."""
+import click
+from pytail.engine import Engine
+
+
+@click.command()
+@click.option('--config', '-c', help='YAML config')
+def main(config):
+    engine = Engine()
+    engine.on_execute()
+
+
+if __name__ == '__main__':
+    main()
